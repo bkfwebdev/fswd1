@@ -1,4 +1,4 @@
-import { createSeerver } from 'node:http';
+import { createServer } from 'node:http';
 import { MongoClient } from 'mongodb';
 
 const url = 'mongodb://localhost:27017';
@@ -12,7 +12,7 @@ try {
     console.error('Error connecting to MongoDB server:', err);
 }
 
-const server = createSeerver(async (req, res) => {
+const server = createServer(async (req, res) => {
     const db = client.db(dbName);
     const users = db.collection('users');
     const userList = await users.find({}).toArray();
