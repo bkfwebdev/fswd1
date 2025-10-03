@@ -1,16 +1,14 @@
 import mongoose from 'mongoose'
 import { describe, expect, test, beforeEach } from '@jest/globals'
 import {
-  createPost
-  /*
+  createPost,
   listAllPosts,
   listPostsByAuthor,
   listPostsByTag,
   getPostById,
   updatePost,
   deletePost,
-  */
-} from '../services/posts.js'
+} from '../db/services/posts.js'
 import { Post } from '../db/models/post.js'
 
 describe('creating posts', () => {
@@ -51,7 +49,7 @@ describe('creating posts', () => {
     expect(createdPost._id).toBeInstanceOf(mongoose.Types.ObjectId)
   })
 })
-/*
+
 const samplePosts = [
   { title: 'Learning Redux', author: 'Daniel Bugl', tags: ['redux'] },
   { title: 'Learn React Hooks', author: 'Daniel Bugl', tags: ['react'] },
@@ -173,5 +171,4 @@ describe('deleting posts', () => {
     const result = await deletePost('000000000000000000000000')
     expect(result.deletedCount).toEqual(0)
   })
-}
-*/
+})
