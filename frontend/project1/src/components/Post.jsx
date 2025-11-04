@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-export function Post({ title, contents, author }) {
+function Post({ title, contents, author }) {
   return (
     <article>
       <h3>{title}</h3>
@@ -20,3 +20,5 @@ Post.propTypes = {
   contents: PropTypes.string,
   author: PropTypes.string,
 }
+
+export { Post }
