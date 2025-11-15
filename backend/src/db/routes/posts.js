@@ -7,7 +7,7 @@ import {
   updatePost,
   deletePost,
 } from '../services/posts.js'
-import { requireAuth } from '../middleware/jwt.js'
+import { requireAuth } from '../../middleware/jwt.js'
 
 export function postsRoutes(app) {
   app.get('/api/v1/posts', async (req, res) => {
