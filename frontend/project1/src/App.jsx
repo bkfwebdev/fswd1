@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Blog } from './pages/Blog.jsx'
 import { Signup } from './pages/Signup.jsx'
 import { Login } from './pages/Login.jsx'
-import { AuthContextProvider } from './contexts/AuthContext.jsx'
+import { AuthContextProvider } from './contexts/AuthContext.js'
 
 const queryClient = new QueryClient()
 
