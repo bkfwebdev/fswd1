@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Blog } from './pages/Blog.jsx'
 import { Signup } from './pages/Signup.jsx'
 import { Login } from './pages/Login.jsx'
-import { AuthContextProvider } from './contexts/AuthContext.jsx'
+import AuthProvider from './contexts/AuthProvider.jsx'
 
 const queryClient = new QueryClient()
 
@@ -25,9 +25,9 @@ const router = createBrowserRouter([
 export function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <AuthContextProvider>
+      <AuthProvider>
         <RouterProvider router={router} />
-      </AuthContextProvider>
+      </AuthProvider>
     </QueryClientProvider>
   )
 }
