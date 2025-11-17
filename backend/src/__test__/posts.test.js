@@ -8,9 +8,9 @@ import {
   getPostById,
   updatePost,
   deletePost,
-} from '../services/posts.js'
+} from '../db/services/posts.js'
 import { Post } from '../db/models/post.js'
-import { createUser } from '../services/users.js'
+import { createUser } from '../db/services/users.js'
 
 let testUser = null
 let samplePosts = []
