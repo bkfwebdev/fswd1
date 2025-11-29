@@ -2,9 +2,9 @@ import express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 
-import { postsRoutes } from './routes/posts.js'
-import { userRoutes } from './routes/users.js'
-import { eventRoutes } from './routes/events.js'
+import { postsRoutes } from './db/routes/posts.js'
+import { userRoutes } from './db/routes/users.js'
+import { eventRoutes } from './db/routes/events.js'
 
 const app = express()
 app.use(cors())
